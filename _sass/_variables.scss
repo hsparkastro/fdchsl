@@ -23,19 +23,20 @@ $pink-color:          #f92080 !default;
 $pink-color-light:    #ffdddd !default;
 $yellow-color:        #efcc00 !default;
 
-$grey-color:          #828282 !default;
+$grey-color:          #9D968D !default;
 $grey-color-light:    lighten($grey-color, 40%);
-$grey-color-dark:     #1C1C1D;
+$grey-color-dark:     #373A36;
 $grey-900:            #212529;
 
 $white-color: #ffffff !default;
 $black-color: #000000 !default;
 
-$desert-color: #ccad60;
+$athletic-gold-color: #CEB888;
+$campus-gold-color: #C28E0E;
 $light-desert-color:  lighten($grey-color, 25%);
 
 
 // Theme colors
 
-$code-bg-color-light:     rgba($desert-color, 0.05);
+$code-bg-color-light:     rgba($campus-gold-color, 0.05);
 $code-bg-color-dark:      #2c3237 !default;
