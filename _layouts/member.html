@@ -1,0 +1,33 @@
+---
+layout: default
+---
+<!-- page.html -->
+
+
+    <div class="row justify-content-sm-center">
+      <div class="col-sm-4 mt-3 mt-md-0">
+        {% assign image =  page.img | prepend: "assets/img/members/" %}
+        {% include figure.html path=image title="profile image" class="img-fluid rounded z-depth-1" %}
+      </div>
+      <div class="col-sm-8 mt-3 mt-md-0">
+        <h1 class="post-title">{{ page.name }}</h1>
+        <p class="post-description">{{ page.description }}</p>
+        {{ content }}
+      </div>
+    </div>
+    
+    <h3 id="publications">Publications</h3>
+    
+    {% if page.bibliography %}
+    <h4 id="journal-publications">Journal Publications</h4>
+    {% bibliography --file inseok_hwang --file {{page.bibliography}} --query @article[author~={{page.lastname}} && author~={{page.firstname}}] --template bibtemplate %}
+    <h4 id="conference-publications">Conference Publications</h4>
+    {% bibliography --file inseok_hwang --file {{page.bibliography}} --query @inproceedings[author~={{page.lastname}} && author~={{page.firstname}}] --template bibtemplate %}
+    {% else %}
+    <h4 id="journal-publications">Journal Publications</h4>
+    {% bibliography --file inseok_hwang --query @article[author~={{page.lastname}} && author~={{page.firstname}}] --template bibtemplate %}
+    <h4 id="conference-publications">Conference Publications</h4>
+    {% bibliography --file inseok_hwang --query @inproceedings[author~={{page.lastname}} && author~={{page.firstname}}] --template bibtemplate %}
+    {% endif %}
+
+

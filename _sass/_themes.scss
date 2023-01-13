@@ -4,12 +4,12 @@
  
 :root {
   --global-bg-color: #{$white-color};
-  --global-code-bg-color: #{$code-bg-color-light};
+  --global-code-bg-color: lighten($steam-color, 40%);
   --global-text-color: #{$black-color};
-  --global-text-color-light: #{$grey-color};
-  --global-theme-color: #{$boilermaker-gold-color};
-  --global-hover-color: #{$boilermaker-gold-color};
-  --global-footer-bg-color: #{$grey-color-dark};
+  --global-text-color-light: #{$steel-color};
+  --global-theme-color: #{$field-color};
+  --global-hover-color: #{$field-color};
+  --global-footer-bg-color: #{$steam-color};
   --global-footer-text-color: #{$grey-color-light};
   --global-footer-link-color: #{$white-color};
   --global-distill-app-color: #{$grey-color};
@@ -34,7 +34,7 @@
 }
 
 html[data-theme='dark'] {
-  --global-bg-color: #{$grey-color-dark};
+  --global-bg-color: #{$steel-color};
   --global-code-bg-color: #{$code-bg-color-dark};
   --global-text-color: #{$grey-color-light};
   --global-text-color-light: #{$grey-color-light};

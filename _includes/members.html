@@ -1,0 +1,28 @@
+<span style="color:black">
+  {%- if member.redirect -%}
+  <a href="{{ member.redirect }}" style="color:black;">
+  {%- else -%}
+  <a href="{{ member.url | relative_url }}" style="color:black;">
+  {%- endif -%}
+      {% assign image =  member.img | prepend: "assets/img/members/" %}
+      {% include figure.html class="img-fluid rounded" path=image alt="member thumbnail" %}
+      <h5><b>{{ member.name }}</b></h5>
+   </a>
+</span>
+{% case member.category %}
+  {% when "visiting" %}
+     Visiting Professor
+  {% when "postdoc" %}
+     Postdoctorial Researcher
+  {% when "phd" %}
+     Ph.D. Student
+  {% when "ms" %}
+     Masters Student
+  {% when "undergrad" %}
+     Undergraduate Student  
+  {% else %}
+{% endcase %}
+<hr style='margin-top:0.35em;margin-bottom:0.35em;' />
+{{ member.area | capitalize }} 
+<span style="display:inline-block; width: 1em;"></span>
+
